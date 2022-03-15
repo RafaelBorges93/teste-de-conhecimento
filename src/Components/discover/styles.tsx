@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
+export const Container = styled.header `
+  margin: 10px;
+  font-weight: 700;
+  font-size: 1.875rem;
+`
 
 export const Content = styled.div `
-  width: 100%;
-  background: var(--black);
+  margin: 10px;
+  font-weight: 700;
+  font-size: 1.875rem;
+  background: var(--pink);
 
+  
   button {   
     font-size: 1rem;
     font-weight: 700;
@@ -13,13 +21,12 @@ export const Content = styled.div `
     padding: 0 2rem;
     border-radius: 0.6rem;
     height: 3rem;
+    background: var(--pink-shop);
     gap: 10px;
 
     transition: filter 0.2s;
-    cursor: pointer;
 
     &:hover {
-      background: var(--yellow);
       filter: brightness(0.9);
     }
   }  
