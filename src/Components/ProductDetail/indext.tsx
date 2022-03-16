@@ -8,22 +8,19 @@ interface ProductCardProps {
   price?: number;
 }
 
-export default function ProductCardPromotion(props: ProductCardProps) {
-  const { image, title, description } = props
-    function event() {
-      window.location.href='/products' 
-    }
+export default function ProductDetail(props: ProductCardProps) {
+  const { image, title, description, price } = props
 
   return (
     <Container>
       <Content>
         <div>
-          <Image src={image} alt="product" height="164px" width="164px" />
+          <Image src={image} alt="product" height="300px" width="434px" />
         </div>
-        <tr>
+        <tr> 
           <td>
             <h2>{title}</h2>
-            <button onClick={event}>SHOP</button>
+            <button>R$ {price}</button>
           </td>
           <td>
             <text>{description}</text>

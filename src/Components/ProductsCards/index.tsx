@@ -13,13 +13,16 @@ export default function ProductCard(props: ProductCardProps) {
 
   return (
       <Content>
+
       <div>
-        <Image src={image} alt="product" height="258px" width="200px"/>       
-        <tr>
-          <text>R$ {price}</text>
-        </tr>
+        <button>
+          <Image src={image} alt="product" height="258px" width="200px"/>       
+          <tr>
+            <text>R$ {price}</text>
+          </tr>
+        </button>        
       </div>
-      <button>{title}</button>
+      <p>{title}</p>
       </Content>  
   )
-} 
+}

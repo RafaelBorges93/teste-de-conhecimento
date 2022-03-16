@@ -6,6 +6,7 @@ import Promotion from '../Components/Promotion'
 
 export default function Home() {
   
+
   return (
     <>
       <Header>        

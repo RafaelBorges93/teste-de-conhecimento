@@ -17,8 +17,8 @@ export const Content = styled.div `
   box-shadow: 0px 4px 20px rgb(169,169,169);
 
   background: #fff;
-
-   div {
+  
+  div {
     text-align: center;
     width: 200px;
     height: 258px;
@@ -26,6 +26,10 @@ export const Content = styled.div `
     z-index: 1000;  
     position: relative;
     
+    button { 
+      border: none;
+      background: #fff;
+    }
     
     tr {
       display: flex;
@@ -50,11 +54,14 @@ export const Content = styled.div `
     }
   }
 
-  button {
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 242px;
     font-size: 0.7rem;
     font-weight: 400;
-    color: #FFF;
+    color: #fff;
     border: none;
     padding: 5px;
     margin: 0;
@@ -62,13 +69,6 @@ export const Content = styled.div `
     box-shadow: 0px 4px 20px rgb(83, 83, 83);
     height: 51px;
     background: var(--black);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.9);
-    }
+    text-align: center;
   }  
 `
