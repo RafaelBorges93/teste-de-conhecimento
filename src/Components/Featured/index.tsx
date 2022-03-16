@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export default function Discover() {
+export default function Featured() {
   return (
     <Container>
-      <h2>DISCOVER</h2>
+      <h2>FEATURE</h2>
     </Container>
   )
 }

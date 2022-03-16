@@ -8,7 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     --blue: rgba(97,156,235,0.2);
     --blue-shop: #619CEB;
     --pink: rgba(200,118,118,0.2);
-    --pink-shop: #C87676;
+    --pink-shop: #EE797E;
+    --red: #ff0000;
     
     --text-title: #000000;
     --text-body: #A8A4A4;

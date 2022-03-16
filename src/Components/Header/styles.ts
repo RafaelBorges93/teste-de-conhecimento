@@ -1,20 +1,30 @@
 import styled from 'styled-components';
 
 export const Container = styled.header `
-  padding: 8px;
-  height: 180px;
-  width: 100%;
-  background: var(--black);
-  margin: 0;
   display: grid;
+  background: var(--black);
+  padding: 0.5rem;
+  height: 11.25rem;
   width: 100%;
-  grid-template-rows: 50px 1fr 1fr;
-  text-align: center;
+  margin: 0;
+  
+  @media (max-width: 720px) {
+    width: 700px;
+  } 
+`;
+
+export const Content = styled.div`  
+  margin: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  gap: 0.625rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
   div {
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
+    height: 3.375rem;
+    width: 3.375rem;
+    margin-left: 3.125rem;
     align-items: center;
   }
 
@@ -28,16 +38,22 @@ export const Container = styled.header `
     justify-content: center;
     align-items: center;   
   }
-   
-`;
-
-export const Content = styled.div`  
-  margin: 0;
-  width: 100%;
-  margin-bottom: 10px;
   
-  gap: 10px;
+  @media (max-width: 720px) {
+      width: 650px;
 
+    a{
+      grid-row-start: auto;
+      font-size: 1.6rem;
+    }
+  }
+`
+
+export const Menu = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  
   button {   
     font-size: 1rem;
     font-weight: 700;
@@ -46,7 +62,7 @@ export const Content = styled.div`
     padding: 0 2rem;
     border-radius: 0.6rem;
     height: 3rem;
-    gap: 10px;
+    gap: 0.625rem;
 
     transition: filter 0.2s;
 
@@ -54,5 +70,5 @@ export const Content = styled.div`
       background: var(--yellow);
       filter: brightness(0.9);
     }
-  }  
+  }
 `
