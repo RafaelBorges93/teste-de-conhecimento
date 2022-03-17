@@ -2,13 +2,14 @@ import Image from "next/image";
 import { Container, Content } from "./styles";
 
 interface ProductCardProps {
+  id?: number;
   image: string;
   title: string;
   description: string;
   price?: number;
 }
 
-export default function ProductDetail(props: ProductCardProps) {
+export default function ProductDetailPage(props: ProductCardProps) {
   const { image, title, description, price } = props
 
   return (

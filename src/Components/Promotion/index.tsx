@@ -24,11 +24,13 @@ export default function Promotion() {
     fetchProducts()
   }, []);
 
+  
+
   return (
     <Container>
       <Content>
       {products.length > 0 ? products.map(product => (
-        <ProductCardPromotion key={product.title} image={product.image} title={product.title} description={product.description} />
+        <ProductCardPromotion key={product.title} image={product.image} title={product.title} description={product.description} id={product.id} />
       )) : (
       <span>
         Produtos indisponíveis

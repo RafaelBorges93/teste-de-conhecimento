@@ -45,7 +45,10 @@ export const Content = styled.div `
     }
   }
 
-  button {   
+  a { 
+    display: flex;
+    align-items: center;  
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
     color: #FFF;

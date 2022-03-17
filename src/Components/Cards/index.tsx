@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../ProductsCards";
 
 export interface Product {
-  id: number,
+  id?: number,
   title: string,
   price: number,
   description: string,
@@ -28,7 +28,7 @@ export default function Cards() {
     <Container>
       <Content>
       {products.length > 0 ? products.map(product => (
-        <ProductCard key={product.title} image={product.image} title={product.title} price={product.price} />
+        <ProductCard key={product.title} image={product.image} title={product.title} price={product.price} id={product.id} />
       )) : (
       <span>
         Produtos indisponíveis
