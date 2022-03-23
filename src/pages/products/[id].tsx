@@ -3,8 +3,10 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useRouter } from 'next/router';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
-import ProductDetail from '../../Components/ProductDetail/indext';
-import ProductDetailPage from '../../Components/ProductDetail/indext';
+
+import ProductDetail from '../../Components/ProductDetail';
+import DiscoverProductsList from '../../Components/Promotion';
+import ProductDetailCard from '../../Components/ProductCardPromotion';
 
 export default function Products() {
   function event() {
@@ -20,6 +22,7 @@ export default function Products() {
     async function fetchProduct(): Promise<void> {
       const response = await api.get(`/products/${id}`);
       setProductsId(response.data)
+      console.log(response)
     } 
     fetchProduct()
   }, [id]);
@@ -31,8 +34,8 @@ export default function Products() {
           <AiOutlineArrowLeft/>&nbsp;&nbsp;Voltar
         </button>
       </Header>
-      {productsId.length ? productsId.map(product => (
-        <ProductDetailPage key={product.title} image={product.image} title={product.title} description={product.description} id={product.id} />
+      {productsId.length > 0 ? productsId.map(product => (
+        <ProductDetailCard key={product.id} image={product.image} title={product.title} description={product.description} /> 
       )) : (
       <span>
         Produto indisponível

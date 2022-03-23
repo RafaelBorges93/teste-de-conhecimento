@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {  Content } from "./styles";
+import {  Container, Content } from "./styles";
 
 export interface ProductCardProps {
   id: number;
@@ -10,23 +10,23 @@ export interface ProductCardProps {
   price?: number;
 }
 
-export default function ProductCard(props: ProductCardProps) {
+export default function ProductSummaryCard(props: ProductCardProps) {
   const { image, title, price, id } = props
 
   return (
+      <Container>
       <Content>
-
-      <div>
         <Link href={`/products/${id}`}>
           <a>
             <Image src={image} alt="product" height="258px" width="200px"/>       
-            <tr>
-              <text>R$ {price}</text>
-            </tr>
+            <div>
+              <p>R$ {price}</p>
+            </div>
           </a>
         </Link>                 
-      </div>
-      <p>{title}</p>
-      </Content>  
+        </Content> 
+      <title>{title}</title>
+      
+      </Container> 
   )
 }

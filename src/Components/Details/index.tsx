@@ -2,7 +2,7 @@ import { Container, Content } from "./styles";
 import api from "../../services/api"
 import { useEffect, useState } from "react";
 import ProductCardPromotion from "../ProductCardPromotion";
-import ProductDetail from "../ProductDetail/indext";
+import ProductDetail from "../ProductDetail";
 
 export interface Products {
   id: number,

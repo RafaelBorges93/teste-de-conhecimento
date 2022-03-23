@@ -1,14 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `  
- display: flex;
- align-items: center;
- justify-content: center;
-  
-` 
-
-export const Content = styled.div `
-  font-weight: 700;
+ font-weight: 700;
   margin-left: 10px;
   height: 315px;
   width: 242px;
@@ -17,8 +10,36 @@ export const Content = styled.div `
   box-shadow: 0px 4px 20px rgb(169,169,169);
 
   background: #fff;
+  title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 242px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    border-radius: 0 0  0.6rem 0.6rem;
+    box-shadow: 0px 4px 20px rgb(83, 83, 83);
+    height: 51px;
+    background: var(--black);
+    text-align: center;
+  } 
   
-  div {
+  @media(max-width: 800px) {
+    flex-direction: column;
+    position: relative;
+    scroll-margin-inline: 10px;
+scroll-margin-inline: 1em .5em ;
+  }
+` 
+
+export const Content = styled.div `
+  
+    
+  
     text-align: center;
     width: 200px;
     height: 258px;
@@ -31,11 +52,11 @@ export const Content = styled.div `
       background: #fff;
     }
     
-    tr {
+    div {
       display: flex;
       justify-content: flex-end;
       
-      text {
+      p {
         position: absolute;
         right: 10px;
         bottom: 10px;
@@ -52,23 +73,7 @@ export const Content = styled.div `
         
       }
     }
-  }
+  
 
-  p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 242px;
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    margin: 0;
-    border-radius: 0 0  0.6rem 0.6rem;
-    box-shadow: 0px 4px 20px rgb(83, 83, 83);
-    height: 51px;
-    background: var(--black);
-    text-align: center;
-  }  
+  
 `

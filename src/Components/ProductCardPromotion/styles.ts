@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
- 
+  display: flex;
+
+  @media(max-width: 800px) {
+    flex-direction: column;
+    position: relative;
+  } 
 `
 
 export const Content = styled.div `
@@ -14,35 +19,29 @@ export const Content = styled.div `
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  overflow: hidden;  
+  overflow: hidden;    
+`
 
-  div {
+export const Img = styled.div `
     margin: 10px;
     mix-blend-mode: multiply;
+`
 
-  }
-  tr { 
+export const Div1 = styled.div `
     font-size: 14px;
     font-weight: 400;
-    td { 
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      margin-right: 10px;
-      margin-top: 10px;
-      gap: 10px;
+`
 
-      h2 {
-        font-size: 22px;
-        overflow: hidden;
-        width: 60%;
-      }
-    }
+export const Div2 = styled.div `
+  display: flex;
+  margin-right: 10px;
+  margin-top: 10px;
+  gap: 10px;
 
-    text {
-      text-align: justify;
-      color: var(--text-body)
-    }
+  h2 {
+    font-size: 22px;
+    overflow: hidden;
+    width: 60%;
   }
 
   a { 
@@ -65,5 +64,13 @@ export const Content = styled.div `
       filter: brightness(0.9);
     }
   }  
-  
 `
+
+export const Div3 = styled.div `
+    p {
+      text-align: justify;
+      color: var(--text-body)
+    }
+`
+
+

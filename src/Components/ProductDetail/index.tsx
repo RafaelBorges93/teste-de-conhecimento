@@ -9,9 +9,9 @@ interface ProductCardProps {
   price?: number;
 }
 
-export default function ProductDetailPage(props: ProductCardProps) {
+export default function ProductDetail(props: ProductCardProps) {
   const { image, title, description, price } = props
-
+ 
   return (
     <Container>
       <Content>

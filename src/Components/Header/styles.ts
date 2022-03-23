@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.header `
-  display: grid;
   background: var(--black);
   padding: 0.5rem;
-  height: 11.25rem;
   width: 100%;
-  margin: 0;
+
+
   
-  @media (max-width: 720px) {
+  /* @media (max-width: 720px) {
     width: 700px;
-  } 
+  }  */
 `;
 
 export const Content = styled.div`  
@@ -20,6 +19,9 @@ export const Content = styled.div`
   gap: 0.625rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 720px) {
+    width: 700px;
+  } 
 
   div {
     height: 3.375rem;
@@ -54,6 +56,7 @@ export const Menu = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   
+    
   button {   
     font-size: 1rem;
     font-weight: 700;

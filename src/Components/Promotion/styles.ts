@@ -4,7 +4,9 @@ export const Container = styled.header `
   margin: 10px;
   font-weight: 700;
   font-size: 1.875rem;
-  display: flex;  
+  display: flex; 
+  
+  
 `
 
 export const Content = styled.div `
@@ -16,6 +18,5 @@ export const Content = styled.div `
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  
   
 `

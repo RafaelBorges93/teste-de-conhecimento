@@ -3,6 +3,7 @@ import api from "../../services/api"
 import { useEffect, useState } from "react";
 import ProductCard from "../ProductsCards";
 
+
 export interface Product {
   id?: number,
   title: string,
@@ -13,7 +14,7 @@ export interface Product {
 }
 
 
-export default function Cards() {
+export default function FeaturedProductsList() {
   const [products, setProducts] = useState<Product[]>([]);
   
   useEffect( () => {

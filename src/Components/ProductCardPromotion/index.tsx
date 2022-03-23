@@ -1,45 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container, Content } from "./styles";
+import { Container, Content, Div1, Div2, Div3, Img } from "./styles";
 
 interface ProductCardProps {
-  id: number;
+  id?: number;
   image: string;
   title: string;
   description: string;
   price?: number;
 }
 
-export default function ProductCardPromotion(props: ProductCardProps) {
+export default function ProductDetailCard(props: ProductCardProps) {
   const { image, title, description, id } = props
-    // function event() {
-    //   window.location.href=`/product/${product.id}`
-    // }
-  // const router = useRouter( )
-
-  // const handleClick = (e) => {
-  //   e.preventDefault()
-  //   router.push(`/product/${product.id}`)
-  // }
-      
+    
   return (
     <Container>
       <Content>
-        <div>
+        <Img>
           <Image src={image} alt="product" height="164px" width="164px" />
-        </div>
-        <tr>
-          <td>
+        </Img>
+        <Div1>
+          <Div2>
             <h2>{title}</h2>
             <Link href={`/products/${id}`}>
             <a>Shop</a>
             </Link>
-            {/* <button >SHOP</button> */}
-          </td>
-          <td>
-            <text>{description}</text>
-          </td>
-        </tr>
+          </Div2>
+          <Div3>
+            <p>{description}</p>
+          </Div3>
+        </Div1>
     </Content>
    </Container>
   )
