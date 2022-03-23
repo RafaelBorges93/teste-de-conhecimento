@@ -38,7 +38,7 @@ export const Content = styled.div `
       h2 {
         font-size: 30px;
         overflow: hidden;
-        width: 60%;
+        /* width: 60%; */
       }
     }
 

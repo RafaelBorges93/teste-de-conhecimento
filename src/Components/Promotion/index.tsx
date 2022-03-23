@@ -1,8 +1,7 @@
 import { Container, Content } from "./styles";
 import api from "../../services/api"
 import { useEffect, useState } from "react";
-import ProductCardPromotion from "../ProductCardPromotion";
-import { ProductCardProps } from "../ProductsCards";
+import ProductDetailCard from "../ProductCardPromotion";
 
 export interface Products {
   id: number,
@@ -30,7 +29,7 @@ export default function DiscoverProductsList() {
     <Container>
       <Content>
       {products.length > 0 ? products.map((product) => (
-        <ProductCardPromotion key={product.title} image={product.image} title={product.title} description={product.description} id={product.id}/>
+        <ProductDetailCard key={product.title} image={product.image} title={product.title} description={product.description} id={product.id}/>
       )) : (
       <span>
         Produtos indisponíveis

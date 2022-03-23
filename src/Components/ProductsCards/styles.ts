@@ -10,6 +10,7 @@ export const Container = styled.div `
   box-shadow: 0px 4px 20px rgb(169,169,169);
 
   background: #fff;
+  
   title {
     display: flex;
     justify-content: center;
@@ -28,12 +29,7 @@ export const Container = styled.div `
     text-align: center;
   } 
   
-  @media(max-width: 800px) {
-    flex-direction: column;
-    position: relative;
-    scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em ;
-  }
+  
 ` 
 
 export const Content = styled.div `

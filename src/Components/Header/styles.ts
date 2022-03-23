@@ -19,9 +19,9 @@ export const Content = styled.div`
   gap: 0.625rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  @media (max-width: 720px) {
+  /* @media (max-width: 720px) {
     width: 700px;
-  } 
+  }  */
 
   div {
     height: 3.375rem;
@@ -42,7 +42,7 @@ export const Content = styled.div`
   }
   
   @media (max-width: 720px) {
-      width: 650px;
+      /* width: 650px; */
 
     a{
       grid-row-start: auto;
@@ -55,7 +55,8 @@ export const Menu = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  
+  overflow-x: auto;
+  overflow-y: hidden;
     
   button {   
     font-size: 1rem;
