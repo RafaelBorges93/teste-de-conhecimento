@@ -23,7 +23,7 @@ export default function ProductDetailCard(props: ProductCardProps) {
           <Div2>
             <h2>{title}</h2>
             <Link href={`/products/${id}`}>
-            <a>Shop</a>
+              <a>Shop</a>
             </Link>
           </Div2>
           <Div3>

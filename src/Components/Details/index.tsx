@@ -1,7 +1,7 @@
 import { Container, Content } from "./styles";
 import api from "../../services/api"
 import { useEffect, useState } from "react";
-import ProductCardPromotion from "../ProductCardPromotion";
+import ProductCardPromotion from "../ProductDetailCard";
 import ProductDetail from "../ProductDetail";
 
 export interface Products {

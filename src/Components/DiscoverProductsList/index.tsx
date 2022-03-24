@@ -1,16 +1,9 @@
 import { Container, Content } from "./styles";
 import api from "../../services/api"
 import { useEffect, useState } from "react";
-import ProductDetailCard from "../ProductCardPromotion";
+import ProductDetailCard from "../ProductDetailCard";
 
-export interface Products {
-  id: number,
-  title: string,
-  price: number,
-  description: string,
-  category: string,
-  image: string,
-}
+
 
 export default function DiscoverProductsList() {
   const [products, setProducts] = useState<any[]>([]);

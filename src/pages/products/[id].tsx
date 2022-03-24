@@ -5,8 +5,8 @@ import api from '../../services/api';
 import { useEffect, useState } from 'react';
 
 import ProductDetail from '../../Components/ProductDetail';
-import DiscoverProductsList from '../../Components/Promotion';
-import ProductDetailCard from '../../Components/ProductCardPromotion';
+import DiscoverProductsList from '../../Components/DiscoverProductsList';
+import ProductDetailCard from '../../Components/ProductDetailCard';
 import Detalhes from '../../Components/Detalhes';
 
 export default function Products() {

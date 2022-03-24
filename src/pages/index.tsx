@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import FeaturedProductsList from '../Components/Cards'
-import Discover from '../Components/Discover'
-import Featured from '../Components/Featured'
-import Header from '../Components/Header'
-import DiscoverProductsList from '../Components/Promotion'
+import Discover from '../Components/Discover';
+import DiscoverProductsList from '../Components/DiscoverProductsList';
+import Featured from '../Components/Featured';
+import FeaturedProductsList from '../Components/FeaturedProductsList';
+import Header from '../Components/Header';
+
 import api from '../services/api'
 
 export interface CategoryProps {

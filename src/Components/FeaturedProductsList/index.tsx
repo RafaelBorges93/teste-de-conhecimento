@@ -1,6 +1,6 @@
 import api from "../../services/api"
 import { useEffect, useState } from "react";
-import ProductCard from "../ProductsCards";
+import ProductCard from "../ProductSummaryCard";
 import { Container, Content } from "./styles";
 
 
