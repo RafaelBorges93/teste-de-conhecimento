@@ -1,29 +1,13 @@
-import api from "../../services/api"
-import { useEffect, useState } from "react";
 import ProductCard from "../ProductSummaryCard";
 import { Container, Content } from "./styles";
+import { Product } from "../Commom/product";
 
-
-export interface Product {
-  id?: number,
-  title: string,
-  price: number,
-  description: string,
-  category: string,
-  image: string,
+interface FeaturedProductsListProps {
+  products: Product[];
 }
 
-
-export default function FeaturedProductsList() {
-  const [products, setProducts] = useState<Product[]>([]);
-  
-  useEffect( () => {
-    async function fetchProducts(): Promise<void> {
-      const response = await api.get('/products?limit=5');
-      setProducts(response.data)
-    } 
-    fetchProducts()
-  }, []);
+export default function FeaturedProductsList(props: FeaturedProductsListProps) {
+  const { products } = props;
 
   return (
     <Container>

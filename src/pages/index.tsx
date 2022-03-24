@@ -1,16 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { Product } from '../Components/Commom/product';
 import Discover from '../Components/Discover';
 import DiscoverProductsList from '../Components/DiscoverProductsList';
 import Featured from '../Components/Featured';
 import FeaturedProductsList from '../Components/FeaturedProductsList';
 import Header from '../Components/Header';
-
-import api from '../services/api'
+import api from '../services/api';
 
 export interface CategoryProps {
   category: string;
 }
 export default function Home() {
+  const [products, setProducts] = useState<Product[]>([]);  
+  
+  useEffect( () => {
+    async function fetchProducts(): Promise<void> {
+      const response = await api.get('/products?limit=5');
+      setProducts(response.data)
+    } 
+    fetchProducts()
+  }, []);
 
   return (
     <>
@@ -33,9 +42,9 @@ export default function Home() {
         
       </Header>
       <Discover/>
-      <DiscoverProductsList />
+      <DiscoverProductsList  products={products}/>
       <Featured/>
-      <FeaturedProductsList/>
+      <FeaturedProductsList products={products}/>
     </>
   )
 }

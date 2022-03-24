@@ -1,26 +1,26 @@
 import { Container, Content } from "./styles";
-import api from "../../services/api"
-import { useEffect, useState } from "react";
 import ProductDetailCard from "../ProductDetailCard";
+import { Product } from "../Commom/product";
+import { useEffect, useState } from "react";
 
+interface DiscoverProductsListProps {
+  products: Product[];
+  limit?: number;
+}
 
+export default function DiscoverProductsList(props: DiscoverProductsListProps) {
+  const { products, limit=2 } = props;
+  const [list, setList] = useState<Product[]>([]);
 
-export default function DiscoverProductsList() {
-  const [products, setProducts] = useState<any[]>([]);
-  
-  
-  useEffect( () => {
-    async function fetchProducts(): Promise<any> {
-      const response = await api.get('/products?limit=2');
-      setProducts(response.data)
-    } 
-    fetchProducts()
-  }, []);
+  useEffect(() => {
+    const slicedList = products.slice(0, limit);
+    setList(slicedList)
+  }, [products, limit])
 
   return (
     <Container>
       <Content>
-      {products.length > 0 ? products.map((product) => (
+      {list.length > 0 ? list.map((product) => (
         <ProductDetailCard key={product.title} image={product.image} title={product.title} description={product.description} id={product.id}/>
       )) : (
       <span>
