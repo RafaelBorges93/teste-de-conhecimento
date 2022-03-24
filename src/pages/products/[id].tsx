@@ -8,21 +8,18 @@ import ProductDetail from '../../Components/ProductDetail';
 import DiscoverProductsList from '../../Components/DiscoverProductsList';
 import ProductDetailCard from '../../Components/ProductDetailCard';
 import Detalhes from '../../Components/Detalhes';
+import { Product } from '../../Components/Commom/product';
+import Link from 'next/link';
 
 export default function Products() {
-  function event() {
-    window.location.href='/' 
-  }
-
   const router = useRouter()
   const { id } = router.query
-  const [productsId, setProductsId] = useState([]);
-
+  const [product, setProduct] = useState<Product>(null);
 
   useEffect( () => {
     async function fetchProduct(): Promise<void> {
       const response = await api.get(`/products/${id}`);
-      setProductsId(response.data)
+      setProduct(response.data)
       console.log(response)
     } 
     fetchProduct()
@@ -31,14 +28,16 @@ export default function Products() {
   return (
     <>
       <Header>        
-        <button type="button" onClick={event}>
-          <AiOutlineArrowLeft/>&nbsp;&nbsp;Voltar
-        </button>
+        <Link href="/">
+          <a>
+            <AiOutlineArrowLeft/>&nbsp;&nbsp;Voltar
+          </a>
+        </Link>
       </Header>
       <Detalhes/>
-      {productsId.length > 0 ? productsId.map((product) => (
+      {product ? (
         <ProductDetailCard key={product.id} image={product.image} title={product.title} description={product.description} /> 
-      )) : (
+      ) : (
       <span>
         Produto indisponível
       </span>
