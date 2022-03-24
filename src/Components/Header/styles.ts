@@ -15,7 +15,7 @@ export const Content = styled.div`
 
   @media (max-width: 720px) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     justify-items: start;
   }
 
@@ -23,7 +23,14 @@ export const Content = styled.div`
     height: 3.375rem;
     width: 3.375rem;
     margin-left: 3.125rem;
-    align-items: center;    
+    align-items: center;  
+    
+    @media (max-width: 720px) {
+    display: grid;
+    justify-items: start;
+    margin-left: 0;
+
+  }
   }
 
   a {
@@ -39,7 +46,7 @@ export const Content = styled.div`
   
   @media (max-width: 720px) {
     a{
-      font-size: 1.2rem;
+      font-size: 25px;
     }
   }
 `
@@ -58,6 +65,8 @@ export const Menu = styled.div`
     overflow-x: auto;
     overflow-y: hidden;
     margin: 0;
+    gap: 18px;
+    margin-left: 10px;
   }
 
     

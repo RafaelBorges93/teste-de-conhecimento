@@ -12,7 +12,6 @@ export interface Products {
   image: string,
 }
 
-
 export default function DiscoverProductsList() {
   const [products, setProducts] = useState<any[]>([]);
   

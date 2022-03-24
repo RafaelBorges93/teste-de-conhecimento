@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import ProductDetail from '../../Components/ProductDetail';
 import DiscoverProductsList from '../../Components/Promotion';
 import ProductDetailCard from '../../Components/ProductCardPromotion';
+import Detalhes from '../../Components/Detalhes';
 
 export default function Products() {
   function event() {
@@ -34,7 +35,8 @@ export default function Products() {
           <AiOutlineArrowLeft/>&nbsp;&nbsp;Voltar
         </button>
       </Header>
-      {productsId.length > 0 ? productsId.map(product => (
+      <Detalhes/>
+      {productsId.length > 0 ? productsId.map((product) => (
         <ProductDetailCard key={product.id} image={product.image} title={product.title} description={product.description} /> 
       )) : (
       <span>
