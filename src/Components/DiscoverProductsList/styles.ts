@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.header `
-  margin: 10px;
+  
+`
+
+export const Discover = styled.h2 `
+  margin-top: 20px;
+  margin-left: 20px;
   font-weight: 700;
-  font-size: 1.875rem;
-  display: flex; 
+  font-size: 2.188rem;
 `
 
 export const Content = styled.div `

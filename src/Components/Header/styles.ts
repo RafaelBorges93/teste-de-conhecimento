@@ -68,8 +68,29 @@ export const Menu = styled.div`
     gap: 18px;
     margin-left: 10px;
   }
+  
+  a {  
+    display: flex;
+    align-items: center; 
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    background: var(--background);
+    border: 0;
+    padding: 0 2rem;
+    border-radius: 0.6rem;
+    height: 3rem;
+    text-decoration: none;
 
-    
+
+    transition: filter 0.2s;
+
+    &:hover {
+      background: var(--yellow);
+      filter: brightness(0.9);
+    }
+  }
+
   button {   
     font-size: 1rem;
     font-weight: 700;

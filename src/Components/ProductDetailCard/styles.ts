@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
-  display: flex;
-`
-
 export const Content = styled.div `
   margin: 5px;
   font-weight: 700;
@@ -13,7 +9,7 @@ export const Content = styled.div `
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  overflow: hidden;  
+  overflow: hidden; 
   
   @media (max-width: 720px) {
     display: flex;
@@ -44,6 +40,7 @@ export const Div1 = styled.div `
 
 export const Div2 = styled.div `
   display: flex;
+  justify-content: space-between;
   margin-right: 10px;
   margin-top: 10px;
   gap: 10px;
@@ -55,9 +52,7 @@ export const Div2 = styled.div `
   } 
 
   h2 {
-    font-size: 22px;
-    overflow: hidden;
-    /* width: 60%; */
+    font-size: 20px;
 
       @media (max-width: 720px) {
       text-align: center;
@@ -86,15 +81,31 @@ export const Div2 = styled.div `
   }  
 `
 
-export const Div3 = styled.div `
-    p {
-      text-align: justify;
-      color: var(--text-body);
-      margin-right: 14px;
-    }
+export const Price = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 155px;
+  color: #FFF;
+  border: 0;
+  padding: 0 2rem;
+  border-radius: 0.6rem;
+  height: 3rem;
+  background: var(--pink-shop);
+  gap: 10px;
+`
 
-    @media (max-width: 720px) {
-      display: none;
+export const Div3 = styled.div `
+  text-align: justify;
+  color: var(--text-body);
+  margin-right: 14px;  
+  
+
+
+  @media (max-width: 720px) {
+    display: none;      
   } 
 `
 

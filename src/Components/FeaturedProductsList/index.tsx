@@ -19,6 +19,7 @@ export default function FeaturedProductsList(props: FeaturedProductsListProps) {
 
   return (
     <Container>
+      <h2>FEATURED</h2>
       <Content>
       {list.length > 0 ? list.map(product => (
         <ProductCard key={product.title} image={product.image} title={product.title} price={product.price} id={product.id} />

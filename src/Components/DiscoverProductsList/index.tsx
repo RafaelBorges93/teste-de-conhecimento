@@ -1,4 +1,4 @@
-import { Container, Content } from "./styles";
+import { Container, Content, Discover } from "./styles";
 import ProductDetailCard from "../ProductDetailCard";
 import { Product } from "../Commom/product";
 import { useEffect, useState } from "react";
@@ -19,6 +19,7 @@ export default function DiscoverProductsList(props: DiscoverProductsListProps) {
 
   return (
     <Container>
+      <Discover>DISCOVER</Discover>
       <Content>
       {list.length > 0 ? list.map((product) => (
         <ProductDetailCard key={product.id} product={product} showPrice={false}/>
