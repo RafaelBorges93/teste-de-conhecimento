@@ -7,7 +7,6 @@ export const Container = styled.header`
 export const Content = styled.div `
   margin: 5px;
   font-weight: 700;
-  /* width: 659px; */
   height: 184px;
   font-size: 1.875rem;
   background: var(--pink);
@@ -34,8 +33,7 @@ export const Img = styled.div `
     display: flex;
     justify-content: center;
     width: 246px;
-    height: 128px;
-
+    height: 160px;
   } 
 `
 

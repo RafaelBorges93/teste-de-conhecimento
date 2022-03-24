@@ -25,8 +25,7 @@ export default function ProductSummaryCard(props: ProductCardProps) {
           </a>
         </Link>                 
         </Content> 
-      <title>{title}</title>
-      
+        <title>{title}</title>      
       </Container> 
   )
 }

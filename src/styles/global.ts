@@ -20,12 +20,12 @@ export const GlobalStyle = createGlobalStyle`
   
   * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
   html {
     width: 100%;
-    overflow: hidden;
 
     @media (max-width: 1080px) {
       font-size: 93.75%; // 15px
@@ -35,8 +35,6 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 87.5%; // 14px
     }
   }
-
-  
 
   body, input, textarea, button {
     font-family: 'Roboto', sans-serif;

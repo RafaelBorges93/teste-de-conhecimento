@@ -5,8 +5,6 @@ export const Container = styled.header `
   font-weight: 700;
   font-size: 1.875rem;
   display: flex; 
-  
-  
 `
 
 export const Content = styled.div `
@@ -17,11 +15,8 @@ export const Content = styled.div `
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  
-
   @media(max-width: 720px) {
     display: flex;
     flex-direction: column;
-  } 
-  
+  }  
 `
