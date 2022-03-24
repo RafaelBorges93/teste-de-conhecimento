@@ -42,9 +42,9 @@ export default function Home() {
         
       </Header>
       <Discover/>
-      <DiscoverProductsList  products={products}/>
+      <DiscoverProductsList  products={products} />
       <Featured/>
-      <FeaturedProductsList products={products}/>
+      <FeaturedProductsList products={products} />
     </>
   )
 }
