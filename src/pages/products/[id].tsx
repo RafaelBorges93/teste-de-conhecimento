@@ -36,7 +36,7 @@ export default function Products() {
       </Header>
       <Detalhes/>
       {product ? (
-        <ProductDetailCard key={product.id} image={product.image} title={product.title} description={product.description} /> 
+        <ProductDetailCard product={product} showPrice={true} /> 
       ) : (
       <span>
         Produto indisponível

@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Product } from "../Commom/product";
 import { Container, Content, Div1, Div2, Div3, Img } from "./styles";
 
 interface ProductCardProps {
-  id?: number;
-  image: string;
-  title: string;
-  description: string;
-  price?: number;
+  product: Product;
+  showPrice: boolean;
 }
 
 export default function ProductDetailCard(props: ProductCardProps) {
-  const { image, title, description, id } = props
+  const { 
+    product: {image, title, description, id, price }, 
+    showPrice,
+  } = props;
     
   return (
     <Container>
@@ -22,9 +23,13 @@ export default function ProductDetailCard(props: ProductCardProps) {
         <Div1>
           <Div2>
             <h2>{title}</h2>
-            <Link href={`/products/${id}`}>
-              <a>Shop</a>
-            </Link>
+            {showPrice ? (
+              <div>{price}</div>
+            ) : (
+              <Link href={`/products/${id}`}>
+                <a>Shop</a>
+              </Link>
+            )}
           </Div2>
           <Div3>
             <p>{description}</p>

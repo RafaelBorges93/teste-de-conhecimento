@@ -21,7 +21,7 @@ export default function DiscoverProductsList(props: DiscoverProductsListProps) {
     <Container>
       <Content>
       {list.length > 0 ? list.map((product) => (
-        <ProductDetailCard key={product.title} image={product.image} title={product.title} description={product.description} id={product.id}/>
+        <ProductDetailCard key={product.id} product={product} showPrice={false}/>
       )) : (
       <span>
         Produtos indisponíveis
