@@ -19,7 +19,6 @@ export default function Header(props: HeaderProps) {
           <a>CUPONERIA STORE</a>
         </Link>
       </Content>
-
       <Menu> 
         {children}        
       </Menu>

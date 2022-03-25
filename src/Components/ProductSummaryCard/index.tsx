@@ -18,18 +18,18 @@ export default function ProductSummaryCard(props: ProductCardProps) {
   }).format(price); 
 
   return (
-      <Container>
-        <Content>
-          <Link href={`/products/${id}`}>
-            <a>
-              <Image src={image} alt="product" height="258px" width="200px"/>       
-              <div>
-                <p>{formatter}</p>
-              </div>
-            </a>
-          </Link>                 
-        </Content> 
-        <title>{title}</title>      
-      </Container> 
+    <Container>
+      <Content>
+        <Link href={`/products/${id}`}>
+          <a>
+            <Image src={image} alt="product" height="258px" width="200px"/>       
+            <div>
+              <p>{formatter}</p>
+            </div>
+          </a>
+        </Link>                 
+      </Content> 
+      <title>{title}</title>      
+    </Container> 
   )
 }

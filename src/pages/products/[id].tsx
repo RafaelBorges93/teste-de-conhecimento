@@ -32,8 +32,9 @@ export default function Products() {
           </a>
         </Link>
       </Header>
+      <Detalhes/>
       {product ? (
-        <Detalhes product={product} showPrice={true} /> 
+        <ProductDetailCard product={product} showPrice={true} showDescription={{onMobile: true, onDesktop: true}}/> 
       ) : (
       <span>
         Produto indisponível

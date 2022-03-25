@@ -35,8 +35,7 @@ export default function Home() {
         </button>
         <button type="button" onClick={() => setCategory("jewelery")}>
           JEWELERY
-        </button>
-        
+        </button>        
       </Header>
       <DiscoverProductsList  products={products} />
       <FeaturedProductsList products={products} />

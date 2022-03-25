@@ -1,24 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
+import styled from "styled-components";
 import { Product } from "../Commom/product";
-import { Content, Div1, Div2, Div3, Img, Price } from "./styles";
+import { Content, Div1, Div2, Img, Price } from "./styles";
 
 interface ProductCardProps {
   product: Product;
   showPrice: boolean;
+  showDescription: {
+    onMobile: boolean;
+    onDesktop: boolean;
+  }
 }
 
 export default function ProductDetailCard(props: ProductCardProps) {
   const { 
     product: {image, title, description, id, price }, 
     showPrice,
+    showDescription,
   } = props;
 
   const formatter = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-  }).format(price); 
+  }).format(price);
   
+  const Div3 = styled.div `
+  text-align: justify;
+  color: var(--text-body);
+  margin-right: 14px;   
+  display: ${showDescription.onDesktop ? 'block' : 'none'};
+
+  @media (max-width: 720px) {
+    display: ${showDescription.onMobile ? 'block' : 'none'};      
+  } 
+` 
     
   return ( 
       <Content>

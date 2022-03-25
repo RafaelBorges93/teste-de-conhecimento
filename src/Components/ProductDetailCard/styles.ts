@@ -97,16 +97,6 @@ export const Price = styled.header`
   gap: 10px;
 `
 
-export const Div3 = styled.div `
-  text-align: justify;
-  color: var(--text-body);
-  margin-right: 14px;  
-  
 
-
-  @media (max-width: 720px) {
-    display: none;      
-  } 
-`
 
 

@@ -56,8 +56,7 @@ export const Menu = styled.div`
   justify-content: space-between;
   margin-left: 60px;
   margin-right: 60px;
-  align-items: flex-start;
-  
+  align-items: flex-start;  
 
   @media (max-width: 720px) {
     display: flex;

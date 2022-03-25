@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.header `
-  
-`
-
-export const Discover = styled.h2 `
   margin-top: 20px;
   margin-left: 20px;
   font-weight: 700;

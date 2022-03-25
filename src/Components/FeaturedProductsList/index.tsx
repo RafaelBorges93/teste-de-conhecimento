@@ -30,5 +30,5 @@ export default function FeaturedProductsList(props: FeaturedProductsListProps) {
       )}
       </Content>
     </Container>
- )
+  )
 }  
