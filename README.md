@@ -1,4 +1,5 @@
 <h1 align="center"> CUPONERIA STORE </h1>
+🚨 <p> A API está com um tempo de resposta um pouco longa. </p>
 
 #Versão Desktop</br>
 ![CUPONERIASTORE](https://user-images.githubusercontent.com/88861319/160160564-243e3c68-20f5-41ea-bfe8-c4f94e7910a0.PNG)
